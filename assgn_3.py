@@ -87,7 +87,7 @@ from mylib import LUdecomposition   # Importing LUdecomposition class from mylib
 
 def extract_LU(A): # Extract L and U from the compact storage matrix A (Crout).
     n = len(A)
-    L = [0.0 for _ in range(n)]
+    L = np.zeros((n, n))
     U = [[1.0 if i == j else 0.0 for j in range(n)] for i in range(n)]  # U with diagonal = 1
     # Fill L and U from A
     for i in range(n):
